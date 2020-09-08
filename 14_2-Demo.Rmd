@@ -23,7 +23,6 @@ library(tidyverse)
 library(rvest)
 library(stringr)
 library(purrr)
-library(knitr)
 library(lubridate)
 ```
 
@@ -155,7 +154,7 @@ text <- html_nodes(document1, "div.field-docs-content") %>%
           html_text()
 
 #this is a long document, so let's just display the first 1000 characters
-text %>% substr(1, 1000) 
+text %>% str_sub(1, 1000) 
 ```
 
 ### Challenge 2: Make a function
